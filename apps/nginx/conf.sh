@@ -13,6 +13,7 @@ fi
 echo "docker container: [ $APP_NAME ] COPY CONFIGURATION FILES"
 echo "docker container: [ $APP_NAME ] > source: $APP_CONF_D/*.conf"
 echo "docker container: [ $APP_NAME ] > destination: $NGINX_CONF_D"
+cp $APP_CONF_D/*.conf $NGINX_CONF_D
 
 echo "docker container: [ $APP_NAME ] TEST CONFIGURATION"
 docker exec -it "$APP_NAME" nginx -t
