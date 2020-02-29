@@ -4,7 +4,6 @@ source $(pwd)/apps/common.sh
 APP_NAME=gitlab-ce
 APP_PORT=3001
 DOCKER_IMAGE=gitlab/gitlab-ce:latest
-SCRIPTPATH="$( cd "$(dirname "$0")" || exit ; pwd -P )"
 
 container_remove $APP_NAME
 

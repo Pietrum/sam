@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# constant
+SCRIPTPATH="$( cd "$(dirname "$0")" || exit ; pwd -P )"
+
 # remove running container
 function container_remove() {
   ID=$(docker ps -a | grep "$1" | awk '{print $1}')
