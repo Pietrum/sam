@@ -16,9 +16,7 @@ echo "docker container: [ $APP_NAME ] > destination: $NGINX_CONF_D"
 cp $APP_CONF_D/*.conf $NGINX_CONF_D
 
 echo "docker container: [ $APP_NAME ] TEST CONFIGURATION"
-docker exec -it "$APP_NAME" nginx -t | grep 'test failed'
+docker exec -it "$APP_NAME" nginx -t
 
-if [[ $? == 1 ]]; then
-  echo "docker container: [ $APP_NAME ] RELOAD"
-  docker exec -it "$APP_NAME" nginx -s reload
-fi
+echo "docker container: [ $APP_NAME ] RELOAD"
+docker exec -it "$APP_NAME" nginx -s reload
