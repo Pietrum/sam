@@ -1,9 +1,6 @@
 #!/bin/bash
-source $(pwd)/apps/common.sh
-
-APP_NAME=gitlab-ce
-APP_PORT=3001
-DOCKER_IMAGE=gitlab/gitlab-ce:latest
+source $(pwd)/apps/_common.sh
+source $(pwd)/apps/gitlab-ce/_common.sh
 
 container_remove $APP_NAME
 

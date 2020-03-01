@@ -1,6 +1,6 @@
 #!/bin/bash
-source $(pwd)/apps/common.sh
-source $(pwd)/apps/redis/common.sh
+source $(pwd)/apps/_common.sh
+source $(pwd)/apps/redis/_common.sh
 
 container_remove $APP_NAME
 
