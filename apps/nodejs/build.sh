@@ -6,6 +6,7 @@ image_remove "$IMAGE_NAME" "v$PCK_VERSION"
 
 echo "docker image: [ $IMAGE_NAME ] BUILD"
 docker build --no-cache \
+  --network=host \
   -f "$(pwd)/apps/nodejs/dockerfiles/$2.Dockerfile" \
   -t "$IMAGE_NAME:v$PCK_VERSION" \
   "$1"

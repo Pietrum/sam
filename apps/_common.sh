@@ -9,7 +9,7 @@ function image_remove() {
 
   if  [ "$ID" ]; then
     echo "docker image: [ $APP_NAME ] REMOVING IMAGE $ID"
-#    docker rmi "$ID" &> /dev/null
+    docker rmi "$ID" &> /dev/null
   fi
 }
 
