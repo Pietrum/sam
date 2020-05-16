@@ -3,7 +3,7 @@
 
 # apps
 /apps/nginx/conf.d/*.conf
-/apps/redis/data/
+/apps/redis/data/*
 
 # sites
-/sites/**/
+/sites/*
