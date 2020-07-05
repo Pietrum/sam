@@ -18,7 +18,7 @@ apk add --no-cache make gcc g++ python; \
 npm install -g node-gyp; \
 #
 # Install app dependencies and run all tests
-npm ci; \
+npm install; \
 npm test; \
 #
 # Cleanup
